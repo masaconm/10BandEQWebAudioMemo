@@ -1,0 +1,323 @@
+/* CSS Document */
+body {
+  background-color: #2C2C2B;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto; /* 中央揃え */
+  padding: 0 20px; /* 余白を追加 */
+  box-sizing: border-box;
+}
+h3 {
+  color: #faebd7;
+  padding-top: 20px;
+}
+thead, tbody {
+  color: #faebd7;
+}
+/* ヘッダーの基本スタイル */
+header {
+  max-width: 1200px;
+  margin: 0 auto; /* 中央揃え */
+  display: flex;
+  justify-content: space-between;
+  color: #faebd7;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+/* footer */
+footer {
+  height: 60px;
+  background-color: #222221;
+  margin-top: 100px;
+  color: #faebd7;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* sliderのスタイル */
+.slider-container, .gain-container {
+  width: 50px;
+}
+.slider {
+  width: 200px;
+}
+.slider-label, .slider-value {
+  font-size: 12px;
+}
+/* Buttonのスタイル */
+#playButton, #saveButton, #loadButton, #clearButton, #languageToggle {
+  font-size: 16px;
+  ont-size: 16px;
+  padding: 0px 16px;
+  border-radius: 10px;
+  background-color: black;
+  color: antiquewhite;
+  box-shadow: 0px 0px 18px 4px #000000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+.fileLabel-container {
+  font-size: 16px;
+  padding: 0px 16px;
+  border-radius: 10px;
+  background-color: black;
+  color: antiquewhite;
+  box-shadow: 0px 0px 18px 4px #000000;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+  border-image: initial;
+  margin-left: 15px;
+}
+/* Gainのスタイル */
+#gainMeter {
+  padding-top: 95px;
+  color: #faebd7;
+}
+.tag {
+  color: antiquewhite;
+  font-weight: 600;
+}
+#gainSlider {
+  width: 200px;
+  transform: rotate(-90deg);
+  margin-top: 10px;
+}
+/* zoomのスタイル */
+.zoom-controls {
+  color: #faebd7;
+}
+/* スライダーのトラック部分のカスタマイズ */
+input[type="range"] {
+  -webkit-appearance: none;
+  /* width: 100%; */
+  /* height: 8px; */
+  background: linear-gradient(to right, #1a05cf, #ff4500);
+  border-radius: 5px;
+  outline: none;
+}
+/* マウスホバー時のトラック色 */
+input[type="range"]:hover {
+  opacity: 1;
+}
+/* スライダーのサム（つまみ）のカスタマイズ */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #ff4081; /* サムの色 */
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #ff4081;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+/* 20241113 テーブルのスタイル */
+#presetTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+#presetTable th, #presetTable td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+#presetName {
+  width: 200px;
+  margin-right: 20px;
+}
+#presetSelect {
+  width: 300px;
+  margin-right: 20px;
+}
+#playlist, #audioFileInput {
+  color: #faebd7;
+}
+#audioFileName {
+  color: #faebd7;
+  margin-bottom: 10px;
+}
+#levelMeter {
+  display: flex;
+  gap: 10px;
+}
+canvas {
+  background-color: #333;
+  border-radius: 5px;
+}
+#peakDisplay div {
+  color: yellow;
+  font-size: 14px;
+}
+/* Webkit（Chrome, Safari）用 */
+#waveform::-webkit-scrollbar {
+  height: 8px; /* スクロールバーの高さ */
+}
+#waveform::-webkit-scrollbar-track {
+  background-color: #2C2C2B !important; /* スクロールバーの背景色 */
+  display: none !important;
+}
+#waveform::-webkit-scrollbar-thumb {
+  background-color: #FF4500; /* スクロールバーのつまみ色 */
+  border-radius: 4px; /* 角の丸み */
+}
+#waveform::-webkit-scrollbar-thumb:hover {
+  background-color: #FF6347; /* スクロールバーのつまみのホバー時の色 */
+}
+/* Firefox用 */
+#waveform {
+  scrollbar-width: thin; /* スクロールバーの太さを細く */
+  scrollbar-color: #FF4500 #f0f0f0; /* つまみ色 背景色 */
+}
+/* モバイル対応のスタイル (画面幅が768px以下) */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .nav-links a {
+    font-size: 18px;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  /* メニューが表示されたときのスタイル */
+  .nav-links.active {
+    display: flex;
+  }
+}
+/* 共通のスタイル */
+.slider-container, .gain-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  margin: 0 5px;
+}
+.slider {
+  width: 200px;
+  transform: rotate(-90deg);
+  margin-top: 10px;
+}
+.slider-label {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 10px;
+  color: #faebd7;
+}
+.slider-value {
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: center;
+  color: #faebd7;
+}
+.eq-paanel-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 110px;
+  padding-bottom: 40px;
+  box-shadow: 0px 0px 18px 4px #000000 inset;
+  ;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+/* 通常のスタイル（画面幅が430pxより大きい場合） */
+.eq-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.wave-wrapper {
+  box-shadow: 0px 0px 18px 4px #000000 inset;
+  border-radius: 10px;
+  padding: 20px;
+}
+/* タブレット対応 (幅600px以上800px以下) */
+@media (min-width: 601px) and (max-width: 820px) {
+  .slider-container, .gain-container {
+    width: 45px;
+  }
+  .slider-label, .slider-value {
+    font-size: 10px;
+  }
+  .eq-wrapper {
+    margin-top: 0px;
+  }
+  #presetTable {
+    font-size: 14px;
+    max-width: 500px;
+  }
+}
+/* スマートフォン対応 (幅600px以下) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+    padding-left: 20px;
+  }
+  .preset-container {
+    margin-top: 30px;
+  }
+  .gain-container {
+    display: none;
+  }
+  .slider-container {
+    margin-bottom: 90px;
+  }
+  .slider {
+    width: 150px;
+  }
+  .eq-wrapper {
+    margin-top: 80px;
+  }
+  #presetTable {
+    font-size: 12px;
+  }
+}
+/* 画面幅が430px以下の場合のスタイル */
+@media (max-width: 430px) {
+  .eq-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+  /* 下段5つのスライダーにmargin-bottomを適用 */
+  .slider-container:nth-child(n+6) {
+    margin-bottom: 20px;
+  }
+  .eq-paanel-wrapper {
+    padding-top: 40px;
+  }
+}
